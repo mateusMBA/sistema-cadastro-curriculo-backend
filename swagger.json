@@ -1,7 +1,7 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.0.2",
   "info": {
-    "description": "API de notícias.",
+    "description": "API para cadastro de currículos no banco de dados da empresa fictícia JobsNet.",
     "version": "1.0.0",
     "title": "JobsNet register API",
     "contact": {
@@ -12,16 +12,10 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "api.sistemanoticias.com.br",
-  "basePath": "/news-api/v1",
-  "tags": [
+  "servers": [
     {
-      "name": "noticias",
-      "description": "Noticias para todos os gostos."
+      "url": "https://apicadastrocurriculo.herokuapp.com"
     }
-  ],
-  "schemes": [
-    "https"
   ],
   "paths": {
     "/register": {
