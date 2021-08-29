@@ -26,9 +26,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/register', registerRouter);
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
-app.get('/', (req,res) =>{
-  res.send('Hello World');
-})
 
 app.listen(process.env.PORT || 3000, () =>{
   console.log('Server has started')
