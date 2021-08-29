@@ -6,6 +6,8 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+console.log('recebi solicitação')
+
 router.post('/', function(req, res, next) {
 
   var connection = mysql.createConnection({
