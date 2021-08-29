@@ -1,0 +1,116 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "API de notícias.",
+    "version": "1.0.0",
+    "title": "JobsNet register API",
+    "contact": {
+      "email": "mateus.barros.almeida@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "api.sistemanoticias.com.br",
+  "basePath": "/news-api/v1",
+  "tags": [
+    {
+      "name": "noticias",
+      "description": "Noticias para todos os gostos."
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/register": {
+      "post": {
+        "tags": [
+          "cadastro"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "nome": {
+                    "type": "string"
+                  },
+                  "profissao": {
+                    "type": "string"
+                  },
+                  "cargo_desejado": {
+                    "type": "string"
+                  },
+                  "data_nascimento": {
+                    "type": "string",
+                    "example": "2017-01-01",
+                    "format": "date",
+                    "pattern": "YYYY-MM-DD"
+                  },
+                  "estado_civil": {
+                    "type": "string"
+                  },
+                  "genero": {
+                    "type": "string"
+                  },
+                  "cep": {
+                    "type": "string"
+                  },
+                  "logradouro": {
+                    "type": "string"
+                  },
+                  "numero": {
+                    "type": "string"
+                  },
+                  "complemento": {
+                    "type": "string"
+                  },
+                  "bairro": {
+                    "type": "string"
+                  },
+                  "cidade": {
+                    "type": "string"
+                  },
+                  "estado": {
+                    "type": "string"
+                  },
+                  "celular": {
+                    "type": "string"
+                  },
+                  "telefone": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "identidade": {
+                    "type": "string"
+                  },
+                  "cpf": {
+                    "type": "string"
+                  },
+                  "veiculo": {
+                    "type": "boolean"
+                  },
+                  "habilitacao": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Usuário cadastrado com sucesso."
+          },
+          "400": {
+            "description": "Já existe usuário cadastrado com CPF solicitado."
+          }
+        }
+      }
+    }
+  }
+}
